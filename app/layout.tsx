@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   },
   description:
     "Ihr zuverlassiger Partner fur Dachsanierung, Dachreparatur, Zimmerei und Dachzubehor. Meisterbetrieb mit uber 15 Jahren Erfahrung. 24/7 Notdienst. Kostenlose Beratung und Angebotserstellung in Ihrer Region.",
+  metadataBase: new URL("https://dachservice24plus.de"),
   keywords: [
     "Dachdecker",
     "Dachsanierung",

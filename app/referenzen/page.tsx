@@ -273,7 +273,7 @@ export default function ReferenzenPage() {
             asChild
           >
             <a
-              href="tel:+40756637012"
+              href="tel:+4915783220352"
               className="flex items-center justify-center gap-3"
             >
               <Phone className="w-5 h-5" />

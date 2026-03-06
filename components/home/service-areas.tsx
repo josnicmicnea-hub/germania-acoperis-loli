@@ -118,7 +118,7 @@ export function ServiceAreas() {
                 className="bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white"
                 asChild
               >
-                <a href="tel:+40756637012" className="flex items-center justify-center gap-2">
+                <a href="tel:+4915783220352" className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4" />
                   Kostenlose Erstberatung
                 </a>

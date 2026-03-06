@@ -64,11 +64,12 @@ export function HeroSection() {
               <GTMButton
                 gtmLabel="hero_call_now"
                 gtmCategory="Hero"
+                adsConversion={true}
                 className="bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 asChild
               >
                 <a
-                  href="tel:+40756637012"
+                  href="tel:+4915783220352"
                   className="flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />

@@ -42,14 +42,14 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-[#cca43b]" />
             <a
-              href="tel:+40756637012"
+              href="tel:+4915783220352"
               className="hover:text-[#cca43b] transition-colors"
               data-gtm-event="click"
               data-gtm-category="Contact"
               data-gtm-action="phone_click"
               data-gtm-label="header_phone"
             >
-              +40 756 637 012
+              +49 1578 3220352
             </a>
             <span className="hidden sm:inline text-[#cca43b] mx-2">|</span>
             <span className="hidden sm:inline">24/7 Notdienst erreichbar</span>
@@ -99,7 +99,7 @@ export function Header() {
               className="bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white px-6 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
               asChild
             >
-              <a href="tel:+40756637012">Kostenloses Angebot</a>
+              <a href="tel:+4915783220352">Kostenloses Angebot</a>
             </GTMButton>
           </div>
 
@@ -141,7 +141,7 @@ export function Header() {
                 className="w-full bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white"
                 asChild
               >
-                <a href="tel:+40756637012">Jetzt Anrufen: +40 756 637 012</a>
+                <a href="tel:+4915783220352">Jetzt Anrufen: +49 1578 3220352</a>
               </GTMButton>
             </div>
           </div>

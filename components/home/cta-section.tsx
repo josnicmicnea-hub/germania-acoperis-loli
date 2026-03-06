@@ -37,13 +37,14 @@ export function CTASection() {
               <GTMButton
                 gtmLabel="cta_call_now"
                 gtmCategory="CTA Section"
+                adsConversion={true}
                 size="lg"
                 className="bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 asChild
               >
-                <a href="tel:+40756637012" className="flex items-center justify-center gap-3">
+                <a href="tel:+4915783220352" className="flex items-center justify-center gap-3">
                   <Phone className="w-5 h-5" />
-                  <span>+40 756 637 012</span>
+                  <span>+49 1578 3220352</span>
                 </a>
               </GTMButton>
               <GTMButton

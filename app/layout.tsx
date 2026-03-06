@@ -1,11 +1,13 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
+import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CookieConsent } from "@/components/layout/cookie-consent"
 import { ScrollToTop } from "@/components/layout/scroll-to-top"
+import { GoogleAdsConversion } from "@/components/analytics/google-ads-conversion"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Ihr zuverlassiger Partner fur Dachsanierung, Dachreparatur, Zimmerei und Dachzubehor. Meisterbetrieb mit uber 15 Jahren Erfahrung. 24/7 Notdienst. Kostenlose Beratung und Angebotserstellung in Ihrer Region.",
-  metadataBase: new URL("https://dachservice24plus.de"),
+  metadataBase: new URL("https://www.topdachservice.de"),
   keywords: [
     "Dachdecker",
     "Dachsanierung",
@@ -38,6 +40,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Dachservice24Plus" }],
   creator: "Dachservice24Plus",
   publisher: "Dachservice24Plus",
+  /* Google Search Console site verification */
+  verification: {
+    google: "0ulEOiK0NcNWY2TZVRvZrcYewEUTVPFpQnq4JBviXFY",
+  },
   robots: {
     index: true,
     follow: true,
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://dachservice24plus.de",
+    url: "https://www.topdachservice.de",
     siteName: "Dachservice24Plus",
     title: "Dachservice24Plus - Professionelle Dachsanierung & Dachreparatur",
     description:
@@ -73,9 +79,9 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://dachservice24plus.de",
+    canonical: "https://www.topdachservice.de",
     languages: {
-      "de-DE": "https://dachservice24plus.de",
+      "de-DE": "https://www.topdachservice.de",
     },
   },
   category: "Bauwesen",
@@ -94,10 +100,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
   name: "Dachservice24Plus",
-  image: "https://dachservice24plus.de/logo.png",
-  "@id": "https://dachservice24plus.de",
-  url: "https://dachservice24plus.de",
-  telephone: "+40756637012",
+  image: "https://www.topdachservice.de/logo.png",
+  "@id": "https://www.topdachservice.de",
+  url: "https://www.topdachservice.de",
+  /* Primary Google Ads tracking number */
+  telephone: "+4915783220352",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Deutschland",
@@ -126,30 +133,34 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              // GTM Container ID will be added here
-              // (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              // })(window,document,'script','dataLayer','GTM-XXXXXX');
-            `,
-          }}
-        />
+        {/* Structured data for search engines */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        <noscript>
-          {/* <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe> */}
-        </noscript>
+        {/* Google Ads tag (gtag.js) — loads after page is interactive to avoid render-blocking */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17991439786"
+          strategy="afterInteractive"
+        />
+        {/* Initialize dataLayer and configure Google Ads conversion account */}
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17991439786', {
+              phone_conversion_number: '+4915783220352',
+              send_page_view: true
+            });
+          `}
+        </Script>
         <ScrollToTop />
         <Header />
         <main>{children}</main>
         <Footer />
         <CookieConsent />
+        {/* Global phone-click conversion listener for Google Ads */}
+        <GoogleAdsConversion />
         <Analytics />
       </body>
     </html>

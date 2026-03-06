@@ -80,10 +80,11 @@ export function ServicePageLayout({
               <GTMButton
                 gtmLabel={`${title}_hero_call`}
                 gtmCategory="Service Page"
+                adsConversion={true}
                 className="bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white px-8 py-4 text-lg rounded-lg"
                 asChild
               >
-                <a href="tel:+40756637012" className="flex items-center justify-center gap-2">
+                <a href="tel:+4915783220352" className="flex items-center justify-center gap-2">
                   <Phone className="w-5 h-5" />
                   Kostenloses Angebot anfordern
                 </a>
@@ -231,12 +232,13 @@ export function ServicePageLayout({
             <GTMButton
               gtmLabel={`${title}_cta_call`}
               gtmCategory="Service Page CTA"
+              adsConversion={true}
               className="bg-gradient-to-r from-[#cca43b] to-[#d4b55a] hover:from-[#b8922f] hover:to-[#cca43b] text-white px-8 py-4 text-lg rounded-lg"
               asChild
             >
-              <a href="tel:+40756637012" className="flex items-center justify-center gap-2">
+              <a href="tel:+4915783220352" className="flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
-                +40 756 637 012
+                +49 1578 3220352
               </a>
             </GTMButton>
           </div>

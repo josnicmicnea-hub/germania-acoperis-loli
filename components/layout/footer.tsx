@@ -101,7 +101,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+40756637012"
+                  href="tel:+4915783220352"
                   className="flex items-center gap-3 text-[#e5e5e5] hover:text-[#cca43b] transition-colors group"
                   data-gtm-event="click"
                   data-gtm-category="Contact"
@@ -113,7 +113,7 @@ export function Footer() {
                   </div>
                   <div>
                     <p className="text-xs text-[#e5e5e5]/70">Telefon / Notdienst</p>
-                    <p className="font-medium">+40 756 637 012</p>
+                    <p className="font-medium">+49 1578 3220352</p>
                   </div>
                 </a>
               </li>
